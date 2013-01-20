@@ -1,3 +1,14 @@
+/*
+---
+description: Manage and Sort items between 2 select boxes
+
+license: MIT-style
+
+authors:
+- Trevor Orr
+
+*/
+
 var selectManager = new Class({
     Implements: [Options],	
     
