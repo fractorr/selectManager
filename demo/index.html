@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Select Box Manager</title>
+
+	<link rel="stylesheet" href="styles.cs" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="../src/mootools-core-1.4.5-full-nocompat-yc.js"></script>
+
+	<script type="text/javascript" src="../src/selectManager.js"></script>
+</head>
+
+<body>
+	<div style="float: left; clear: none;">
+		All<br>
+		<select name="All" id="All" size="8" multiple="multiple">
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+			<option value="4">Option 4</option>
+		</select>
+	</div>
+
+	<div style="float: left; clear: none; margin-top: 21px;">
+        <input type="button" id="add" value="Add" />
+		<br>
+		<input type="button" id="remove" value="Remove" />
+	</div>
+			
+	<div style="float: left; clear: none;">
+		Selected<br>
+		<select name="Featured" id="Featured" size="8" multiple="multiple">
+			<option value="5">Option 5</option>
+			<option value="6">Option 6</option>
+		</select>
+	</div>
+
+	<div style="float: left; clear: none; margin-top: 21px;">
+        <input type="button" id="up" value="Move Up" />
+		<br>
+        <input type="button" id="down" value="Move Down" />
+	</div>
+	
+	<script type="text/javascript">
+		window.addEvent("domready", function() {
+		    var sm = new selectManager({
+		        src: $('All'),
+		        dst: $('Featured'),
+		        max: 4,
+		        
+		        addBtn: $('add'),
+		        removeBtn: $('remove'),
+		        upBtn: $('up'),
+		        downBtn: $('down')
+		    });
+    	});
+	</script>
+</body>
+</html>
+
