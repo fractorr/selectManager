@@ -1,0 +1,7 @@
+name: selectManager
+description: Manage and Sort items between 2 select boxes
+author: fractor
+category: Utilities
+tags: [select, form, sort, options]
+current: 1.0
+license: MIT License
