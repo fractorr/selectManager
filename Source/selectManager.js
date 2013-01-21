@@ -7,6 +7,8 @@ license: MIT-style
 authors:
 - Trevor Orr
 
+provides: [selectManager]
+
 ...
 */
 
