@@ -7,13 +7,7 @@ license: MIT-style
 authors:
 - Trevor Orr
 
-names:
-
-requires:
-core/1.2.4: '*'
-
-provides:
-
+...
 */
 
 var selectManager = new Class({
