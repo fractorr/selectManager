@@ -60,23 +60,33 @@ var selectManager = new Class({
 
     moveOptionDown: function(opt) {
         var el = $(opt).clone();
+        var eId = $(opt).get('id');
         
         if ($(opt).getNext()) {
             var swap = $(opt).getNext().clone();
+            var sId = $(opt).getNext().get('id');
             
             el.replaces($(opt).getNext());
+            el.set('id', eId);
+            
             swap.replaces($(opt));
+            swap.set('id', sId);
         }
     },
     
     moveOptionUp: function(opt) {
         var el = $(opt).clone();
+        var eId = $(opt).get('id');
         
         if ($(opt).getPrevious()) {
             var swap = $(opt).getPrevious().clone();
+            var sId = $(opt).getPrevious().get('id');
             
             el.replaces($(opt).getPrevious());
+            el.set('id', eId);
+
             swap.replaces($(opt));
+            swap.set('id', sId);
         }
-    }
+    }    
 });	
